@@ -6,6 +6,8 @@ const port = process.env.PORT || 3000;
 const app = express();
 const EventEmitter = require('events');
 
+
+
 const chatEmitter = new EventEmitter();
 const clients = []; // Store connected clients
 const messages = []; // Store chat messages
@@ -107,3 +109,4 @@ app.get('/chat', respondChat);
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+
